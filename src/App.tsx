@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC, useState } from 'react'
 
-function App() {
+import { Mask } from './Mask'
+
+const App: FC = () => {
+  const [value, setValue] = useState<string>('')
+
+  const onChange = (v: string) => {
+    setValue(v)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Mask onChange={onChange} maskType="zip-code" />
+      <p>Returned: {value}</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

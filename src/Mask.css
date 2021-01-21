@@ -1,0 +1,18 @@
+.mask {
+    min-width: 250px;
+    padding: 5px;
+    border: 1px solid #b5b7b9;
+    border-radius: 4px;
+}
+
+.mask::placeholder {
+    color: #ced4da;
+}
+
+.mask.red {
+    outline-color: #dc3545;
+}
+
+.mask.green {
+    outline-color: #198754;
+}
